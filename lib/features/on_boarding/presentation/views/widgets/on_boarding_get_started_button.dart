@@ -12,6 +12,8 @@ class OnBoardingGetStartedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomButton(
       color: Theme.of(context).textTheme.bodyLarge!.color,
+      borderRadius: BorderRadius.circular(999),
+      height: 60,
       child: Center(
         child: Text('Get Started',
             style: Styles.style16Bold.copyWith(
@@ -19,8 +21,6 @@ class OnBoardingGetStartedButton extends StatelessWidget {
                     ? Colors.black
                     : Colors.white)),
       ),
-      borderRadius: BorderRadius.circular(999),
-      height: 60,
     );
   }
 }

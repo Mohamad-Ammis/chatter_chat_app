@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:chatter_chat_app/constans.dart';
 import 'package:chatter_chat_app/core/utils/extensions.dart';
 import 'package:chatter_chat_app/features/on_boarding/presentation/views/widgets/on_boarding_get_started_button.dart';
@@ -16,7 +18,7 @@ class OnBoardingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kMainPagePadding),
+      padding: const EdgeInsets.all(kMainPagePadding),
       // width: MediaQuery.sizeOf(context).width,
       decoration: pref.getBool('isDarkMode') == true
           ? onBoardingViewBackgroundImage()
@@ -25,14 +27,14 @@ class OnBoardingViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            OnBoardingTitleSection(),
+            const OnBoardingTitleSection(),
             40.verticalSizedBox,
             OnBoardingImage(),
             50.verticalSizedBox,
-            OnBoardingInfoText(),
-            Spacer(),
-            OnBoardingGetStartedButton(),
-            Spacer()
+            const OnBoardingInfoText(),
+            const Spacer(),
+            const OnBoardingGetStartedButton(),
+            const Spacer()
           ],
         ),
       ),

@@ -5,17 +5,17 @@ class AppTheme {
   // Light Theme
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor: Color(0xFF3259F3),
+    primaryColor: const Color(0xFF3259F3),
     scaffoldBackgroundColor: kBackgroundColor,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Colors.blue,
       foregroundColor: Colors.white,
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.black),
       bodySmall: TextStyle(color: kSubTitleColor),
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Colors.blue,
     ),
   );
@@ -23,8 +23,8 @@ class AppTheme {
   // Dark Theme
   static final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    primaryColor: Color(0xffFFCB45),
-    textTheme: TextTheme(
+    primaryColor: const Color(0xffFFCB45),
+    textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.white),
       bodySmall: TextStyle(color: kSubTitleColor),
     ),

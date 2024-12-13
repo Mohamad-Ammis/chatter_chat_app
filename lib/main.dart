@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:chatter_chat_app/core/manger/theme_cubit.dart';
 import 'package:chatter_chat_app/core/utils/app_themes.dart';
 import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';

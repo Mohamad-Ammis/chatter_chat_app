@@ -14,7 +14,7 @@ class OnBoardingTitleSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(),
+        const SizedBox(),
         Text(
           'Chatter',
           style: Styles.style36Bold,
