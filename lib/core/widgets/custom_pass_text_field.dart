@@ -6,24 +6,24 @@ class CustomPasswordTextField extends StatefulWidget {
   const CustomPasswordTextField(
       {super.key,
       required this.textStyle,
-      required this.cursorColor,
+      this.cursorColor,
       required this.label,
-      required this.labelStyle,
+      this.labelStyle,
       required this.filled,
-      required this.fillColor,
-      required this.focusedBorderColor,
+      this.fillColor,
+      this.focusedBorderColor,
       this.onChanged,
-      required this.enabledBorderColor,
+       this.enabledBorderColor,
       this.suffixIconColor,
       this.borderRadius});
   final TextStyle textStyle;
-  final Color cursorColor;
+  final Color? cursorColor;
   final String label;
-  final TextStyle labelStyle;
-  final bool filled;
-  final Color fillColor;
-  final Color focusedBorderColor;
-  final Color enabledBorderColor;
+  final TextStyle? labelStyle;
+  final bool? filled;
+  final Color? fillColor;
+  final Color? focusedBorderColor;
+  final Color? enabledBorderColor;
   final Color? suffixIconColor;
   final double? borderRadius;
   final void Function(String)? onChanged;
@@ -51,19 +51,20 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
         labelStyle: widget.labelStyle,
         filled: widget.filled,
         fillColor: widget.fillColor,
-        enabledBorder: OutlineInputBorder(
+        enabledBorder:widget.enabledBorderColor!=null? OutlineInputBorder(
             borderSide:
-                BorderSide(color: widget.enabledBorderColor, width: 0.4),
+                BorderSide(color: widget.enabledBorderColor??Colors.transparent, width: 0.4),
             borderRadius:
-                BorderRadius.all(Radius.circular(widget.borderRadius ?? 16))),
+                BorderRadius.all(Radius.circular(widget.borderRadius ?? 16))):null,
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
-        focusedBorder: OutlineInputBorder(
-            borderSide:
-                BorderSide(color: widget.focusedBorderColor, width: 0.5),
+        focusedBorder:widget.focusedBorderColor!=null? OutlineInputBorder(
+            borderSide: BorderSide(
+                color: widget.focusedBorderColor ?? Colors.transparent,
+                width: 0.5),
             borderRadius:
-                BorderRadius.all(Radius.circular(widget.borderRadius ?? 16))),
+                BorderRadius.all(Radius.circular(widget.borderRadius ?? 16))):null,
         errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.red, width: 0.5),
             borderRadius:

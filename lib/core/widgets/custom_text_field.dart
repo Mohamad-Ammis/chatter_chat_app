@@ -5,13 +5,13 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     required this.textStyle,
-    required this.cursorColor,
+    this.cursorColor,
     required this.label,
-    required this.labelStyle,
+    this.labelStyle,
     required this.filled,
-    required this.fillColor,
-    required this.focusedBorderColor,
-    required this.enabledBorderColor,
+    this.fillColor,
+    this.focusedBorderColor,
+    this.enabledBorderColor,
     required this.suffixIcon,
     this.maxLines,
     this.isEmail,
@@ -21,13 +21,13 @@ class CustomTextField extends StatelessWidget {
   });
   final TextStyle textStyle;
   final int? maxLines;
-  final Color cursorColor;
+  final Color? cursorColor;
   final String label;
-  final TextStyle labelStyle;
+  final TextStyle? labelStyle;
   final bool filled;
-  final Color fillColor;
-  final Color focusedBorderColor;
-  final Color enabledBorderColor;
+  final Color? fillColor;
+  final Color? focusedBorderColor;
+  final Color? enabledBorderColor;
   final IconData? suffixIcon;
   final bool? isEmail;
   final bool? isUserName;
@@ -56,17 +56,23 @@ class CustomTextField extends StatelessWidget {
         labelStyle: labelStyle,
         filled: filled,
         fillColor: fillColor,
-        enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: enabledBorderColor, width: 0.4),
-            borderRadius:
-                BorderRadius.all(Radius.circular(borderRadius ?? 16))),
+        enabledBorder: enabledBorderColor != null
+            ? OutlineInputBorder(
+                borderSide: BorderSide(
+                    color: enabledBorderColor ?? Colors.transparent,
+                    width: 0.4),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(borderRadius ?? 16)))
+            : null,
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
-        focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: focusedBorderColor, width: 0.5),
-            borderRadius:
-                BorderRadius.all(Radius.circular(borderRadius ?? 16))),
+        focusedBorder: focusedBorderColor != null
+            ? OutlineInputBorder(
+                borderSide: BorderSide(color: focusedBorderColor!, width: 0.5),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(borderRadius ?? 16)))
+            : null,
         errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.red, width: 0.5),
             borderRadius:

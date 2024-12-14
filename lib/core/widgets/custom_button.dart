@@ -7,6 +7,7 @@ class CustomButton extends StatelessWidget {
       this.height,
       required this.child,
       this.color,
+      this.boxShadow,
       this.borderRadius,
       this.padding,
       this.onTap});
@@ -15,6 +16,7 @@ class CustomButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final Widget child;
   final Color? color;
+  final List<BoxShadow>? boxShadow;
   final BorderRadiusGeometry? borderRadius;
   final void Function()? onTap;
   @override
@@ -26,7 +28,8 @@ class CustomButton extends StatelessWidget {
         width: width ?? double.infinity,
         height: height,
         decoration: BoxDecoration(
-          color: color,
+          boxShadow: boxShadow,
+          color: color ?? Theme.of(context).primaryColor,
           borderRadius: borderRadius ?? BorderRadius.circular(16),
         ),
         child: child,

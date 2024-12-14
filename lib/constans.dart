@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const String kFontFamily = 'Mulish';
+const String kSecondryFontFamily = 'Poppins';
 const Color kPrimaryLightColor = Color(0xFF3259F3);
 const Color kPrimaryDarkColor = Color(0xffFFCB45);
 const Color kLightBlackColor = Color(0xff292526);

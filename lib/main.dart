@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:chatter_chat_app/core/manger/theme_cubit.dart';
+import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:chatter_chat_app/core/utils/app_themes.dart';
-import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,13 +35,13 @@ class ChatterChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeMode>(
       builder: (context, themeMode) {
-        return MaterialApp(
+        return MaterialApp.router(
+          routerConfig: AppRouter.router,
           debugShowCheckedModeBanner: false,
           title: 'Chat App',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeMode,
-          home: OnBoardingView(),
         );
       },
     );
