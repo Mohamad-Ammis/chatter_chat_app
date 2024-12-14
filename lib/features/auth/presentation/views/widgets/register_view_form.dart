@@ -1,21 +1,35 @@
-
 import 'package:chatter_chat_app/constans.dart';
+import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:chatter_chat_app/core/utils/app_styles.dart';
 import 'package:chatter_chat_app/core/utils/extensions.dart';
 import 'package:chatter_chat_app/core/widgets/custom_button.dart';
 import 'package:chatter_chat_app/core/widgets/custom_pass_text_field.dart';
 import 'package:chatter_chat_app/core/widgets/custom_text_field.dart';
-import 'package:chatter_chat_app/features/auth/presentation/views/widgets/login_view_footer.dart';
+import 'package:chatter_chat_app/features/auth/presentation/views/widgets/custom_auth_footer.dart';
 import 'package:flutter/material.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+class RegisterViewForm extends StatelessWidget {
+  const RegisterViewForm({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        CustomTextField(
+          textStyle:
+              TextStyle(color: Theme.of(context).textTheme.bodyLarge!.color),
+          cursorColor: Theme.of(context).primaryColor,
+          label: 'Name',
+          labelStyle: Styles.style16Regular
+              .copyWith(color: Theme.of(context).textTheme.bodySmall!.color),
+          filled: true,
+          suffixIcon: null,
+          isUserName: true,
+          maxLines: 1,
+          borderRadius: 10,
+        ),
+        29.verticalSizedBox,
         CustomTextField(
           textStyle:
               TextStyle(color: Theme.of(context).textTheme.bodyLarge!.color),
@@ -42,14 +56,6 @@ class LoginForm extends StatelessWidget {
           borderRadius: 10,
         ),
         30.verticalSizedBox,
-        Text(
-          textAlign: TextAlign.end,
-          'Forgot your password?',
-          style: Styles.style14SemiBold.copyWith(
-              color: Theme.of(context).primaryColor,
-              fontFamily: kSecondryFontFamily),
-        ),
-        30.verticalSizedBox,
         CustomButton(
           boxShadow: [
             BoxShadow(
@@ -59,12 +65,12 @@ class LoginForm extends StatelessWidget {
           ],
           child: Text(
             textAlign: TextAlign.center,
-            'Login',
+            'Register',
             style: Styles.style20SemiBold.copyWith(color: Colors.white),
           ),
         ),
         40.verticalSizedBox,
-        const LoginViewFooter()
+        const CustomAuthFooter(title: 'Already have an account',pushRoute: AppRouter.kLoginPath,)
       ],
     );
   }

@@ -1,11 +1,11 @@
-
 import 'package:chatter_chat_app/constans.dart';
+import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:chatter_chat_app/core/utils/app_styles.dart';
 import 'package:chatter_chat_app/core/utils/extensions.dart';
 import 'package:chatter_chat_app/core/widgets/custom_button.dart';
 import 'package:chatter_chat_app/core/widgets/custom_pass_text_field.dart';
 import 'package:chatter_chat_app/core/widgets/custom_text_field.dart';
-import 'package:chatter_chat_app/features/auth/presentation/views/widgets/login_view_footer.dart';
+import 'package:chatter_chat_app/features/auth/presentation/views/widgets/custom_auth_footer.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
@@ -64,7 +64,7 @@ class LoginForm extends StatelessWidget {
           ),
         ),
         40.verticalSizedBox,
-        const LoginViewFooter()
+        const CustomAuthFooter(title: 'Create new account',pushRoute: AppRouter.kRegisterPath,)
       ],
     );
   }
