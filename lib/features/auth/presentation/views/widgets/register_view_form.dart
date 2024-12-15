@@ -66,11 +66,16 @@ class RegisterViewForm extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             'Register',
-            style: Styles.style20SemiBold.copyWith(color: Colors.white),
+            style: Styles.style20SemiBold.copyWith(
+              color: Colors.white,
+            ),
           ),
         ),
         40.verticalSizedBox,
-        const CustomAuthFooter(title: 'Already have an account',pushRoute: AppRouter.kLoginPath,)
+        const CustomAuthFooter(
+          title: 'Already have an account',
+          pushRoute: AppRouter.kLoginPath,
+        )
       ],
     );
   }

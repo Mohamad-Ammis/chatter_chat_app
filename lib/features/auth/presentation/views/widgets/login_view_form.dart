@@ -7,6 +7,7 @@ import 'package:chatter_chat_app/core/widgets/custom_pass_text_field.dart';
 import 'package:chatter_chat_app/core/widgets/custom_text_field.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/widgets/custom_auth_footer.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -42,12 +43,17 @@ class LoginForm extends StatelessWidget {
           borderRadius: 10,
         ),
         30.verticalSizedBox,
-        Text(
-          textAlign: TextAlign.end,
-          'Forgot your password?',
-          style: Styles.style14SemiBold.copyWith(
-              color: Theme.of(context).primaryColor,
-              fontFamily: kSecondryFontFamily),
+        GestureDetector(
+          onTap: () {
+            context.push(AppRouter.kResetPasswordPath);
+          },
+          child: Text(
+            textAlign: TextAlign.end,
+            'Forgot your password?',
+            style: Styles.style14SemiBold.copyWith(
+                color: Theme.of(context).primaryColor,
+                fontFamily: kSecondryFontFamily),
+          ),
         ),
         30.verticalSizedBox,
         CustomButton(
@@ -64,7 +70,10 @@ class LoginForm extends StatelessWidget {
           ),
         ),
         40.verticalSizedBox,
-        const CustomAuthFooter(title: 'Create new account',pushRoute: AppRouter.kRegisterPath,)
+        const CustomAuthFooter(
+          title: 'Create new account',
+          pushRoute: AppRouter.kRegisterPath,
+        )
       ],
     );
   }

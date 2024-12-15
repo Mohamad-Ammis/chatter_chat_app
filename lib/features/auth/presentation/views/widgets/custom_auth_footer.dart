@@ -16,7 +16,11 @@ class CustomAuthFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.push(pushRoute);
+        if (pushRoute == AppRouter.kLoginPath) {
+          context.pop();
+        } else {
+          context.push(pushRoute);
+        }
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),

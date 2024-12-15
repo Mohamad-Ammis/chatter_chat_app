@@ -37,7 +37,10 @@ class AppTheme {
       border: OutlineInputBorder(
         borderSide: BorderSide.none,
       ),
+      labelStyle: TextStyle(
+                    color:kSubTitleColor)
     ),
+    
   );
 
   // Dark Theme
@@ -56,6 +59,7 @@ class AppTheme {
       ),
       
       inputDecorationTheme: InputDecorationTheme(
+        
         fillColor: Colors.white.withOpacity(.02),
         focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: kPrimaryDarkColor, width: 0.5),
@@ -72,5 +76,8 @@ class AppTheme {
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
+        
+      labelStyle: TextStyle(
+                    color:kSubTitleColor),
       ));
 }

@@ -8,12 +8,11 @@ class RegisterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      
       body: Stack(
-        children: [
-          CornerDecorationCircul(),
-          RegisterViewBody()
-        ],
+        children: [CornerDecorationCircul(), RegisterViewBody()],
       ),
-    );;
+    );
+    ;
   }
 }
