@@ -20,7 +20,7 @@ class RegisterViewBody extends StatelessWidget {
                 subTitle: 'Create an account so you can join our chatter app',
               ),
               80.verticalSizedBox,
-              RegisterViewForm()
+              const RegisterViewForm()
             ],
           ),
         ),

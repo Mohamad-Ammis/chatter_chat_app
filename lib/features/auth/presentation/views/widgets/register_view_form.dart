@@ -1,4 +1,3 @@
-import 'package:chatter_chat_app/constans.dart';
 import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:chatter_chat_app/core/utils/app_styles.dart';
 import 'package:chatter_chat_app/core/utils/extensions.dart';

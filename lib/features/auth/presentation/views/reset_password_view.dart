@@ -7,8 +7,9 @@ class ResetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       resizeToAvoidBottomInset: true,
-      body: ResetPasswordViewEmailDetails(),
+      body: const ResetPasswordViewEmailDetails(),
     );
   }
 }

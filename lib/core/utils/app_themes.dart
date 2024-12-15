@@ -77,7 +77,7 @@ class AppTheme {
           borderSide: BorderSide.none,
         ),
         
-      labelStyle: TextStyle(
+      labelStyle: const TextStyle(
                     color:kSubTitleColor),
       ));
 }
