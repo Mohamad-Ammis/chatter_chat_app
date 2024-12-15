@@ -1,4 +1,4 @@
-
+import 'package:chatter_chat_app/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
@@ -10,8 +10,7 @@ class ResetPasswordVerficationOtpTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OtpTextField(
-      enabledBorderColor:
-          Theme.of(context).textTheme.bodyLarge!.color!,
+      enabledBorderColor: kSubTitleColor,
       autoFocus: true,
       numberOfFields: 5,
       borderColor: Theme.of(context).primaryColor,
