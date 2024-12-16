@@ -17,7 +17,8 @@ class CustomTextField extends StatelessWidget {
     this.isEmail,
     this.isUserName,
     this.onChanged,
-    this.borderRadius, this.autoFocus,
+    this.borderRadius,
+    this.autoFocus,
   });
   final TextStyle textStyle;
   final int? maxLines;
@@ -37,8 +38,8 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      autofocus: autoFocus??false,
-      maxLines: maxLines,
+      autofocus: autoFocus ?? false,
+      maxLines: maxLines ?? 1,
       onChanged: onChanged,
       validator: (value) {
         if (isEmail ?? false) {

@@ -1,32 +1,32 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-class ReserPasswordVerficationResendCodeTextButton extends StatefulWidget {
-  const ReserPasswordVerficationResendCodeTextButton({super.key});
+class ResetPasswordResendCodeButtonWithTimer extends StatefulWidget {
+  const ResetPasswordResendCodeButtonWithTimer({super.key});
 
   @override
-  State<ReserPasswordVerficationResendCodeTextButton> createState() =>
-      _ReserPasswordVerficationResendCodeTextButtonState();
+  State<ResetPasswordResendCodeButtonWithTimer> createState() =>
+      _ResetPasswordResendCodeButtonWithTimerState();
 }
 
-class _ReserPasswordVerficationResendCodeTextButtonState
-    extends State<ReserPasswordVerficationResendCodeTextButton> {
+class _ResetPasswordResendCodeButtonWithTimerState
+    extends State<ResetPasswordResendCodeButtonWithTimer> {
   bool isButtonDisabled = false;
-  int remainingTime = 0; 
+  int remainingTime = 0;
   Timer? timer;
 
   void startTimer() {
     const oneSecond = Duration(seconds: 1);
     setState(() {
       isButtonDisabled = true;
-      remainingTime = 5 * 60; 
+      remainingTime = 5 * 60;
     });
 
     timer = Timer.periodic(oneSecond, (Timer t) {
       setState(() {
         if (remainingTime < 1) {
           t.cancel();
-          isButtonDisabled = false; 
+          isButtonDisabled = false;
         } else {
           remainingTime--;
         }
@@ -63,7 +63,7 @@ class _ReserPasswordVerficationResendCodeTextButtonState
             ),
           ),
         ),
-        if (isButtonDisabled) 
+        if (isButtonDisabled)
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(

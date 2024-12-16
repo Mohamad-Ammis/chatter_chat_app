@@ -1,6 +1,8 @@
 import 'package:chatter_chat_app/constans.dart';
+import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:go_router/go_router.dart';
 
 class ResetPasswordVerficationOtpTextField extends StatelessWidget {
   const ResetPasswordVerficationOtpTextField({
@@ -19,14 +21,7 @@ class ResetPasswordVerficationOtpTextField extends StatelessWidget {
       showFieldAsBox: false,
       borderRadius: BorderRadius.circular(10),
       onSubmit: (String verificationCode) {
-        showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: const Text("Verification Code"),
-                content: Text('Code entered is $verificationCode'),
-              );
-            });
+        context.push(AppRouter.kUpdatePasswordPath);
       }, // end onSubmit
     );
   }

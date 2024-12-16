@@ -2,7 +2,7 @@ import 'package:chatter_chat_app/constans.dart';
 import 'package:chatter_chat_app/core/utils/extensions.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/widgets/reset_password_header.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/widgets/reset_password_verfication_otp_text_field.dart';
-import 'package:chatter_chat_app/features/auth/presentation/views/widgets/reset_password_verfication_resend_code_text_button.dart';
+import 'package:chatter_chat_app/features/auth/presentation/views/widgets/reset_password_verfication_resend_code_with_timer.dart';
 import 'package:flutter/material.dart';
 
 class ResetPasswordVerficationViewBody extends StatelessWidget {
@@ -26,7 +26,7 @@ class ResetPasswordVerficationViewBody extends StatelessWidget {
                   'We have sent you an SMS with the code to +62 1309 - 1710 - 1920',
             ),
             20.verticalSizedBox,
-            const ReserPasswordVerficationResendCodeTextButton(),
+            const ResetPasswordResendCodeButtonWithTimer(),
             20.verticalSizedBox,
             const ResetPasswordVerficationOtpTextField(),
           ],
