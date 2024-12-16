@@ -3,6 +3,7 @@ import 'package:chatter_chat_app/features/auth/presentation/views/register_view.
 import 'package:chatter_chat_app/features/auth/presentation/views/reset_password_verfication_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/update_password_view.dart';
+import 'package:chatter_chat_app/features/home/presentation/views/home_view.dart';
 import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -14,10 +15,11 @@ class AppRouter {
   static const String kResetPasswordVerficationPath =
       '/reset_password_verfication_view';
   static const String kUpdatePasswordPath = '/update_password_view';
+  static const String kHomeViewPath = '/home_view';
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const OnBoardingView(),
+      builder: (context, state) => const HomeView(),
     ),
     GoRoute(
       path: kLoginPath,
@@ -38,6 +40,10 @@ class AppRouter {
     GoRoute(
       path: kUpdatePasswordPath,
       builder: (context, state) => const UpdatePasswordView(),
+    ),
+    GoRoute(
+      path: kHomeViewPath,
+      builder: (context, state) => const HomeView(),
     ),
   ]);
 }
