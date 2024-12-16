@@ -33,5 +33,9 @@ class Assets {
   /// Assets for imagesShieldCheckLight
   /// assets/images/shield_check_light.svg
   static const String imagesShieldCheckLight = "assets/images/shield_check_light.svg";
+
+  /// Assets for imagesTest
+  /// assets/images/test.jpg
+  static const String imagesTest = "assets/images/test.jpg";
 }
 

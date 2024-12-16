@@ -4,7 +4,6 @@ import 'package:chatter_chat_app/features/auth/presentation/views/reset_password
 import 'package:chatter_chat_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/update_password_view.dart';
 import 'package:chatter_chat_app/features/home/presentation/views/home_view.dart';
-import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
