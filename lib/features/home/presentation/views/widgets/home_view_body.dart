@@ -8,11 +8,13 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HomeViewAppBar(),
-        16.verticalSizedBox,
-        HomeViewStatusSection(),
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(child: HomeViewAppBar()),
+        SliverToBoxAdapter(
+          child: 20.verticalSizedBox,
+        ),
+        const SliverToBoxAdapter(child: HomeViewStatusSection()),
       ],
     );
   }

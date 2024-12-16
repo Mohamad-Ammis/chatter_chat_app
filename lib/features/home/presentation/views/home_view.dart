@@ -1,4 +1,3 @@
-import 'package:chatter_chat_app/constans.dart';
 import 'package:chatter_chat_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +9,7 @@ class HomeView extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: kMainPagePadding, vertical: 16),
+          padding: EdgeInsets.symmetric(vertical: 16),
           child: HomeViewBody(),
         ),
       ),
