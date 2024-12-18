@@ -57,6 +57,9 @@ class LoginForm extends StatelessWidget {
         ),
         30.verticalSizedBox,
         CustomButton(
+          onTap: () {
+            context.go(AppRouter.kHomeViewPath);
+          },
           boxShadow: [
             BoxShadow(
                 offset: const Offset(0, 10),

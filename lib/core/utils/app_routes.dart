@@ -1,9 +1,12 @@
+import 'package:chatter_chat_app/core/manger/cubit/navigation_cubit.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/login_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/register_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/reset_password_verfication_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:chatter_chat_app/features/auth/presentation/views/update_password_view.dart';
 import 'package:chatter_chat_app/features/home/presentation/views/home_view.dart';
+import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -16,10 +19,7 @@ class AppRouter {
   static const String kUpdatePasswordPath = '/update_password_view';
   static const String kHomeViewPath = '/home_view';
   static final router = GoRouter(routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const HomeView(),
-    ),
+    GoRoute(path: '/', builder: (context, state) => OnBoardingView()),
     GoRoute(
       path: kLoginPath,
       builder: (context, state) => const LoginView(),
@@ -42,7 +42,10 @@ class AppRouter {
     ),
     GoRoute(
       path: kHomeViewPath,
-      builder: (context, state) => const HomeView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => NavigationCubit(),
+        child: const HomeView(),
+      ),
     ),
   ]);
 }

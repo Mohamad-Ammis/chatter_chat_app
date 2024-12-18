@@ -20,13 +20,13 @@ class HomeViewAppBar extends StatelessWidget {
             TextSpan(text: "Welcome Back\n", style: Styles.style16Regular),
             TextSpan(text: "Mohamad 👋", style: Styles.style20Bold),
           ])),
-          GestureDetector(
-              child: SvgPicture.asset(
-            Assets.imagesSearchIcon,
-            width: 32,
-            // ignore: deprecated_member_use
-            color: Theme.of(context).textTheme.bodyLarge!.color,
-          )),
+          // GestureDetector(
+          //     child: SvgPicture.asset(
+          //   Assets.imagesSearchIcon,
+          //   width: 32,
+          //   // ignore: deprecated_member_use
+          //   color: Theme.of(context).textTheme.bodyLarge!.color,
+          // )),
         ],
       ),
     );
