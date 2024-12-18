@@ -14,6 +14,8 @@ class Styles {
       fontFamily: kFontFamily, fontSize: 14, fontWeight: FontWeight.w400);
   static TextStyle style14SemiBold = const TextStyle(
       fontFamily: kFontFamily, fontSize: 14, fontWeight: FontWeight.w600);
+  static TextStyle style14Medium = const TextStyle(
+      fontFamily: kFontFamily, fontSize: 14, fontWeight: FontWeight.w500);
   static TextStyle style14Bold = const TextStyle(
       fontFamily: kFontFamily, fontSize: 14, fontWeight: FontWeight.bold);
   static TextStyle style16Regular = const TextStyle(
