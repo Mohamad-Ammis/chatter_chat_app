@@ -6,6 +6,9 @@ import 'package:chatter_chat_app/features/auth/presentation/views/reset_password
 import 'package:chatter_chat_app/features/auth/presentation/views/update_password_view.dart';
 import 'package:chatter_chat_app/features/home/presentation/views/home_view.dart';
 import 'package:chatter_chat_app/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:chatter_chat_app/features/story/presentation/manger/cubit/story_text_decoration_cubit.dart';
+import 'package:chatter_chat_app/features/story/presentation/manger/story_color_cubit/create_story_color_cubit.dart';
+import 'package:chatter_chat_app/features/story/presentation/views/create_story_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +21,7 @@ class AppRouter {
       '/reset_password_verfication_view';
   static const String kUpdatePasswordPath = '/update_password_view';
   static const String kHomeViewPath = '/home_view';
+  static const String kCreateStoryViewPath = '/create_story_view';
   static final router = GoRouter(routes: [
     GoRoute(path: '/', builder: (context, state) => OnBoardingView()),
     GoRoute(
@@ -47,5 +51,19 @@ class AppRouter {
         child: const HomeView(),
       ),
     ),
+    GoRoute(
+      path: kCreateStoryViewPath,
+      builder: (context, state) => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+          create: (context) => CreateStoryColorCubit(),
+        ),
+        BlocProvider(
+          create: (context) => StoryTextDecorationCubit(),
+        ),
+        ],
+        child: CreateStoryView(),
+      ),
+    )
   ]);
 }
