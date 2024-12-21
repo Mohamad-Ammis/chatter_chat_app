@@ -23,7 +23,7 @@ class StoryTextInputTextField extends StatelessWidget {
             color: Colors.white,
           ),
           cursorColor: Colors.green,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
               hintText: 'What is in your mind',
               hintStyle: TextStyle(fontSize: 32, color: Colors.black26),
               border: InputBorder.none,

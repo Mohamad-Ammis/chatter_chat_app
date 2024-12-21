@@ -88,7 +88,7 @@ class CustomTextField extends StatelessWidget {
           padding: const EdgeInsets.only(right: 8.0),
           child: Icon(
             suffixIcon,
-            color: Colors.black.withOpacity(.55),
+            color: Colors.black.withValues(alpha:  .55),
           ),
         ),
       ),

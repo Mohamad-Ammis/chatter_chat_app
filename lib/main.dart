@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:developer';
-import 'dart:io';
 
 import 'package:chatter_chat_app/core/manger/theme_cubit.dart';
 import 'package:chatter_chat_app/core/utils/app_routes.dart';
@@ -10,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:video_trimmer/video_trimmer.dart';
 
 late SharedPreferences pref;
 Future<void> main() async {

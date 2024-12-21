@@ -10,8 +10,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(kMainPagePadding, 0, kMainPagePadding, 16),
-      child: Row(
+      padding: const EdgeInsets.fromLTRB(kMainPagePadding, 0, kMainPagePadding, 16),
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           BottomNaviagationBarItem(

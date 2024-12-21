@@ -89,7 +89,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
             child: Icon(
               suffixIcon,
               size: 20,
-              color: widget.suffixIconColor ?? Colors.black.withOpacity(0.5),
+              color: widget.suffixIconColor ?? Colors.black.withValues(alpha:  0.5),
             ),
           ),
         ),

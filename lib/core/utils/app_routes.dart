@@ -23,7 +23,7 @@ class AppRouter {
   static const String kHomeViewPath = '/home_view';
   static const String kCreateStoryViewPath = '/create_story_view';
   static final router = GoRouter(routes: [
-    GoRoute(path: '/', builder: (context, state) => OnBoardingView()),
+    GoRoute(path: '/', builder: (context, state) => const OnBoardingView()),
     GoRoute(
       path: kLoginPath,
       builder: (context, state) => const LoginView(),
@@ -62,7 +62,7 @@ class AppRouter {
           create: (context) => StoryTextDecorationCubit(),
         ),
         ],
-        child: CreateStoryView(),
+        child: const CreateStoryView(),
       ),
     )
   ]);

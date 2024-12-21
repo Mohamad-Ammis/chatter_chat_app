@@ -15,6 +15,7 @@ Future<void> pickAndTrimStoryVideo(BuildContext context) async {
         if (filePath != null) {
           log(filePath);
           File file = File(filePath);
+          // ignore: use_build_context_synchronously
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) {
               return TrimmerView(file);

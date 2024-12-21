@@ -20,7 +20,7 @@ class CornerDecorationCircul extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height / 4 * 1.2,
             decoration: BoxDecoration(
                 color: pref.getBool('isDarkMode') == true
-                    ? Colors.white.withOpacity(.01)
+                    ? Colors.white.withValues(alpha:  .01)
                     : const Color.fromARGB(255, 245, 246, 250),
                 borderRadius:
                     const BorderRadius.only(bottomLeft: Radius.circular(999))),

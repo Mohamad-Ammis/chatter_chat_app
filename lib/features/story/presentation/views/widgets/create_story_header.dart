@@ -1,6 +1,4 @@
-import 'dart:developer';
 
-import 'package:chatter_chat_app/core/utils/app_routes.dart';
 import 'package:chatter_chat_app/features/story/presentation/manger/cubit/story_text_decoration_cubit.dart';
 import 'package:chatter_chat_app/features/story/presentation/manger/story_color_cubit/create_story_color_cubit.dart';
 import 'package:chatter_chat_app/features/story/presentation/views/widgets/create_story_header_icon.dart';
@@ -39,7 +37,7 @@ class CreateStoryHeader extends StatelessWidget {
                             .updateFontWeight();
                       },
                       icon: Icons.text_fields_outlined),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   CreateStoryHeaderIcon(

@@ -10,9 +10,9 @@ class CreateStoryFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      decoration: BoxDecoration(color: Colors.black38),
-      child: Row(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      decoration: const BoxDecoration(color: Colors.black38),
+      child: const Row(
         children: [
           CreateStoryWaysTextButtons(),
           Spacer(),

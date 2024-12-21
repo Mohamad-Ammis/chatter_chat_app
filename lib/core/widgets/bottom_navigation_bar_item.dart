@@ -36,7 +36,7 @@ class BottomNaviagationBarItem extends StatelessWidget {
                         ? kPrimaryDarkColor
                         : Colors.black,
                     borderRadius: BorderRadius.circular(999)),
-                duration: Duration(
+                duration: const Duration(
                   milliseconds: 300,
                 ),
               ),
@@ -49,7 +49,7 @@ class BottomNaviagationBarItem extends StatelessWidget {
                         .textTheme
                         .bodyLarge!
                         .color!
-                        .withOpacity(.5),
+                        .withValues(alpha:  .5),
               ),
             ],
           ),

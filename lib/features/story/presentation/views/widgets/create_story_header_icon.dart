@@ -14,7 +14,7 @@ class CreateStoryHeaderIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
             color: Colors.black26, borderRadius: BorderRadius.circular(999)),
         child: Icon(

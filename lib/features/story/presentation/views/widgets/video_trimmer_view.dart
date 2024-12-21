@@ -13,10 +13,10 @@ class TrimmerView extends StatefulWidget {
   const TrimmerView(this.file, {super.key});
 
   @override
-  _TrimmerViewState createState() => _TrimmerViewState();
+  TrimmerViewState createState() => TrimmerViewState();
 }
 
-class _TrimmerViewState extends State<TrimmerView> {
+class TrimmerViewState extends State<TrimmerView> {
   final Trimmer _trimmer = Trimmer();
 
   double _startValue = 0.0;
@@ -75,7 +75,7 @@ class _TrimmerViewState extends State<TrimmerView> {
       body: Builder(
         builder: (context) => Center(
           child: Container(
-            padding: EdgeInsets.only(bottom: 30.0),
+            padding: const EdgeInsets.only(bottom: 30.0),
             // color: Colors.black,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +83,7 @@ class _TrimmerViewState extends State<TrimmerView> {
               children: <Widget>[
                 Visibility(
                   visible: _progressVisibility,
-                  child: LinearProgressIndicator(
+                  child: const LinearProgressIndicator(
                     backgroundColor: Colors.red,
                   ),
                 ),
@@ -134,13 +134,13 @@ class _TrimmerViewState extends State<TrimmerView> {
                       const EdgeInsets.symmetric(horizontal: kMainPagePadding),
                   child: CustomButton(
                     color: Theme.of(context).textTheme.bodyLarge!.color!,
+                    height: 56,
                     child: Center(
                         child: Text(
                       'Submit',
                       style: Styles.style16Bold.copyWith(
                           color: Theme.of(context).scaffoldBackgroundColor),
                     )),
-                    height: 56,
                   ),
                 )
               ],

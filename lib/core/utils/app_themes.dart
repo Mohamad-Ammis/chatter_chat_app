@@ -19,28 +19,24 @@ class AppTheme {
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Colors.blue,
     ),
-    
     inputDecorationTheme: const InputDecorationTheme(
-      fillColor: Color(0xffF1F4FF),
-      focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: kPrimaryLightColor, width: 0.5),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red, width: 0.5),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red, width: 0.5),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent, width: 0.5),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      border: OutlineInputBorder(
-        borderSide: BorderSide.none,
-      ),
-      labelStyle: TextStyle(
-                    color:kSubTitleColor)
-    ),
-    
+        fillColor: Color(0xffF1F4FF),
+        focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: kPrimaryLightColor, width: 0.5),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
+        errorBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.red, width: 0.5),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
+        focusedErrorBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.red, width: 0.5),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.transparent, width: 0.5),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+        ),
+        labelStyle: TextStyle(color: kSubTitleColor)),
   );
 
   // Dark Theme
@@ -57,10 +53,8 @@ class AppTheme {
         bodyLarge: TextStyle(color: Colors.white),
         bodySmall: TextStyle(color: kSubTitleColor),
       ),
-      
       inputDecorationTheme: InputDecorationTheme(
-        
-        fillColor: Colors.white.withOpacity(.02),
+        fillColor: Colors.white.withValues(alpha: .02),
         focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: kPrimaryDarkColor, width: 0.5),
             borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -76,8 +70,6 @@ class AppTheme {
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
-        
-      labelStyle: const TextStyle(
-                    color:kSubTitleColor),
+        labelStyle: const TextStyle(color: kSubTitleColor),
       ));
 }

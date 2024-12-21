@@ -11,5 +11,5 @@ const Color kBorderColor = Color(0xffF2F2F2);
 const Color kGreyBorderColor = Color(0xffDADADE);
 const Color kBackgroundColor = Color(0xffF9F9F9);
 const Color kBackgroundColorDark = Color(0xff1E1E1E);
-Color kLightGreyColor = const Color(0xffEDEDED).withOpacity(.35);
+Color kLightGreyColor = const Color(0xffEDEDED).withValues(alpha:  .35);
 const double kMainPagePadding = 24;
