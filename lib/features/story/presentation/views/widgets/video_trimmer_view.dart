@@ -10,7 +10,7 @@ import 'package:video_trimmer/video_trimmer.dart';
 class TrimmerView extends StatefulWidget {
   final File file;
 
-  TrimmerView(this.file);
+  const TrimmerView(this.file, {super.key});
 
   @override
   _TrimmerViewState createState() => _TrimmerViewState();

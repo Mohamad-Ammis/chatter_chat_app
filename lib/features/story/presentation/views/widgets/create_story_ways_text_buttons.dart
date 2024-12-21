@@ -7,6 +7,7 @@ import 'package:chatter_chat_app/features/story/presentation/views/widgets/video
 import 'package:chatter_chat_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:image_cropper/image_cropper.dart';
 
 class CreateStoryWaysTextButtons extends StatelessWidget {
   const CreateStoryWaysTextButtons({
@@ -28,7 +29,33 @@ class CreateStoryWaysTextButtons extends StatelessWidget {
         ),
         16.horizontalSizedBox,
         InkWell(
-          onTap: () async {},
+          onTap: () async {
+            try {
+              FilePickerResult? result =
+                  await FilePicker.platform.pickFiles(type: FileType.image);
+              if (result != null) {
+                CroppedFile? croppedFile = await ImageCropper().cropImage(
+                  sourcePath: result!.files[0].path!,
+                  uiSettings: [
+                    AndroidUiSettings(
+                      toolbarTitle: 'crop image',
+                      toolbarColor: Theme.of(context).scaffoldBackgroundColor,
+                      toolbarWidgetColor:
+                          Theme.of(context).textTheme.bodyLarge!.color!,
+                      activeControlsWidgetColor: Theme.of(context).primaryColor,
+                      backgroundColor:
+                          Theme.of(context).scaffoldBackgroundColor,
+                      lockAspectRatio: false,
+                    ),
+                  ],
+                );
+              } else {
+                log('NO file picked');
+              }
+            } on Exception catch (e) {
+              log('e: $e');
+            }
+          },
           child: Text(
             "Image",
             style: TextStyle(color: Colors.white),
